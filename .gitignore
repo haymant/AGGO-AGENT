@@ -1,0 +1,31 @@
+/golem-temp/
+# Rust/Cargo build outputs
+/target/
+
+# WASM artifacts
+/target/wasm32-wasip1/
+*.wasm
+
+# Golem generated files and temporary data
+/golem-temp/
+/temp-linked-wasm/
+/task-results/
+/remote-components/
+
+# Local temp
+/tmp/
+
+# Secrets and env files (do not check API keys into git)
+.env
+.env.local
+.env.*.local
+
+# IDEs and editor swap files
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+
+# Logs
+*.log
