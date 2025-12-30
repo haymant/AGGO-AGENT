@@ -16,4 +16,3 @@ golem-rust = { workspace = true, features = ["golem_ai"] }
 serde = { workspace = true }
 serde_json = { workspace = true }
 wstd = { workspace = true }
-golem-wasi-http = { version = "0.1.0" }

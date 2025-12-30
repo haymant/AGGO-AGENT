@@ -9,7 +9,7 @@
 httpApi:
   definitions:
     aggo-agent-api:
-      version: '0.0.1'
+      version: '0.0.2'
       routes:
         - method: GET
           path: /aggo-agent-api/research?{topic}
@@ -19,12 +19,12 @@ httpApi:
             response: |
               let agent = research-agent();
               let result = agent.research(request.query.topic);
-              {status: 200, headers: [["content-type","text/plain"]], body: result }
+              {status: 200u64, headers: { Content-Type: "text/plain" }, body: result }
 
 
   deployments:
     local:
-      - domain: aggo-agent.localhost:9006
+      - domain: aggo-agent-v2.localhost:9006
         definitions:
           - aggo-agent-api
 
@@ -81,7 +81,7 @@ components:
     # -------------------
 
     ## OpenAI
-    # OPENAI_API_KEY: "<KEY>"
+    # DDDDDDDDDD: "<KEY>"
 
     ## Cohere
     # COHERE_API_KEY: "<KEY>"
